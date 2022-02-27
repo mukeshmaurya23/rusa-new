@@ -1,0 +1,68 @@
+
+[
+{
+    "program": "Coding",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "subprogram": [
+    {
+        "program": "Java",
+        "about": "Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation",
+        "eligibility": "above 18",
+        "teacher": "Suresh Sir"
+    },
+    {
+        "program": "C++",
+        "about": "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or C with Classes",
+        "eligibility": "above 58",
+        "teacher": "Priti Maam"
+    },
+    {
+        "program": "Python",
+        "about": "Python is an interpreted high-level general-purpose programming language. I",
+        "eligibility": "above 23",
+        "teacher": "Sanket Sir"
+    }]
+},
+{
+    "program": "Language",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "subprogram": [
+    {
+        "program": "Marathi",
+        "about": "Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation",
+        "eligibility": "above 18",
+        "teacher": "Vishal Sir"
+    },
+    {
+        "program": "Hindi",
+        "about": "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or C with Classes",
+        "eligibility": "above 58",
+        "teacher": "Urmila maam"
+    },
+    {
+        "program": "English",
+        "about": "Python is an interpreted high-level general-purpose programming language. I",
+        "eligibility": "above 23",
+        "teacher": "Jojan Sir"
+    }]
+}]
+
+Single Instance
+[ 
+    {
+        "name": "Piyush",
+        "email": "piyush@gmail.com",
+        "program": "Coding",
+        "subprogram": "Java",
+        "group": "individual"
+    },
+    {
+        "name": "Rahul",
+        "email": "rahul@gmail.com",
+        "program": "Language",
+        "subprogram": "Marathi",
+        "group": "College",
+        "college": "Mulund college of commerce"
+    }
+]
+Base Program Structure

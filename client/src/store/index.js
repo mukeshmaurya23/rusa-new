@@ -1,0 +1,115 @@
+import Vue from "vue";
+import Vuex from "vuex";
+import axios from "axios";
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  state: {
+    greet: "Hello there",
+    data: [
+      {
+        id: 1,
+        program: "Coding",
+        about:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        subprogram: [
+          {
+            program: "Java",
+            about:
+              "Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation",
+            eligibility: "above 18",
+            teacher: "Suresh Sir",
+          },
+          {
+            program: "C++",
+            about:
+              "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or C with Classes",
+            eligibility: "above 58",
+            teacher: "Priti Maam",
+          },
+          {
+            program: "Python",
+            about:
+              "Python is an interpreted high-level general-purpose programming language. I",
+            eligibility: "above 23",
+            teacher: "Sanket Sir",
+          },
+        ],
+      },
+      {
+        id: 2,
+        program: "Language",
+        about:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        subprogram: [
+          {
+            program: "Marathi",
+            about:
+              "Marathi is an Indo-Aryan language predominantly spoken by Marathi people in the Indian state of Maharashtra. It is the official language of Maharashtra, and a co-official language in Goa and the union territory of Dadra and Nagar Haveli and",
+            eligibility: "above 48",
+            teacher: "Vishal Sir",
+          },
+          {
+            program: "Hindi",
+            about:
+              "Hindi, or more precisely Modern Standard Hindi, is an Indo-Aryan language spoken chiefly in the northern part of India. Hindi has been described as a standardised and Sanskritised register of the Hindustani language, ",
+            eligibility: "above 38",
+            teacher: "Urmila maam",
+          },
+          {
+            program: "English",
+            about:
+              "English is a West Germanic language of the Indo-European language family, originally spoken by the inhabitants of early medieval England. It is named after the Angles, one of the ancient Germanic peoples that migrated from Anglia, a peninsula on the Baltic Sea, to the area of Great Britain later named after them: England",
+            eligibility: "above 13",
+            teacher: "Jojan Sir",
+          },
+        ],
+      },
+      {
+        id: 3,
+        program: "Science",
+        about:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        subprogram: [
+          {
+            program: "Biochemistry",
+            about:
+              "Marathi is an Indo-Aryan language predominantly spoken by Marathi people in the Indian state of Maharashtra. It is the official language of Maharashtra, and a co-official language in Goa and the union territory of Dadra and Nagar Haveli and",
+            eligibility: "above 48",
+            teacher: "Vishal Sir",
+          },
+          {
+            program: "Physics",
+            about:
+              "Hindi, or more precisely Modern Standard Hindi, is an Indo-Aryan language spoken chiefly in the northern part of India. Hindi has been described as a standardised and Sanskritised register of the Hindustani language, ",
+            eligibility: "above 38",
+            teacher: "Urmila maam",
+          },
+          {
+            program: "chemistry",
+            about:
+              "English is a West Germanic language of the Indo-European language family, originally spoken by the inhabitants of early medieval England. It is named after the Angles, one of the ancient Germanic peoples that migrated from Anglia, a peninsula on the Baltic Sea, to the area of Great Britain later named after them: England",
+            eligibility: "above 13",
+            teacher: "Jojan Sir",
+          },
+        ],
+      },
+    ],
+  },
+  mutations: {
+    getData(data) {
+      console.log("done ..." + data);
+    },
+  },
+  actions: {
+    async fetchData(context) {
+      let url = "http://localhost:5000/api/v1";
+      let data = await axios.get(url);
+      // let data = await fetch(url);
+      // let val = Math.trunc(data.data.decimal);
+      context.commit("getData", data);
+      console.log(data);
+    },
+  },
+  modules: {},
+});
